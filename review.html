@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review CSS</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th style="width: 25%">CSS syntax ประกอบด้วยอะไรบ้าง</th>
+            <th style="width: 25%">การเขียน CSS มีกี่แบบอะไรบ้าง</th>
+            <th style="width: 25%">selector มีกี่แบบอะไรบ้าง</th>
+            <th style="width: 25%">combinator มีกี่แบบอะไรบ้าง </th>
+        </tr>
+        <tr>
+            <td><img src="syntax.jpg" width="280" height="auto" /></td>
+            <td><p>การเขียน CSS มี 3 ลักษณะคือ Inline, Internal และ External โดยสามารถเลือกใช้ได้ความความเหมาะสมเป็นหลัก<br>
+                1. แบบ Inline คือการเขียนแทรกลงไปในบรรทัดนั้นๆ ของ tag [X]HTML เลย <br>
+                2. แบบ Internal(embedded) คือเขียนแยก CSS ออกจาก tag [X]HTML แต่อยู่ในหน้าเดียวกันกับไฟล์ [X]HTML โดยแทรก css เอาไว้ที่ header<br>
+                3. แบบ External คือการเขียน แยก css ออกมาเป็นไฟล์ .css ต่างหาก แล้วนำเข้าไปใช้ใน หน้าเว็บด้วย การเรียกโดย ใช้ โดยการพิมพ์ 
+                link rel="stylesheet" href="externalcss.css" type="text/css" ไว้ที่ส่วน header ของหน้าเว็บ</p>
+            </td>
+            <td><p>
+                1. Class Selectors เป็น Selector ที่เราต้องกำหนดชื่อของ Selector ขึ้นมาเอง โดย Class Selector การเรียกใช้งานต้องระบุชื่อ Class Selectors ให้กับ Tag ของ HTML จึงจะสามารถใช้งานคุณสมบัติของ Class ที่ได้สร้างไว้ได้<br>
+                2. ID Selectors เป็น Selector ที่อ้างอิงกับ Attribute ที่ชื่อว่า ID ซึ่งเขียนอยู่ภายใน Tag ของ HTML โดยที่ Tag ของ HTML ใดมี ID ซึ่งตรงกับ ID Selectors ที่กำหนด คุณสมบัติของ CSS ที่กำหนดไว้กับ Selector ก็จะมีผลต่อ Tag นั้น<br>
+                3. TAG Selectors Selector ที่อ้างอิงกับชื่อ Tag ของ HTML โดยตรง เช่น tag p, tag div, tag h
+                เป็นต้น นั่นหมายความว่า ถ้าหากกำหนดคุณสมบัติให้แก่ TAG Selectors นี้แล้ว Tag ของ HTML ที่มีชื่อเดียวกับ Selectors นี้็จะมีคุณสมบัติของ CSS เหมือนกันหมดทุก Tag ภายในเว็บเพจนั้น
+            </p></td>
+            <td><p>Combinators ได้แบ่งวิธีการเขียน ออกไปอีก 3 ประเภท 4 รูปแบบ คือ <br>
+
+                <ol>1. Descendant combinators</ol>
+                <ol>2. Child combinators</ol>
+                <ol>3. Sibling combinators</ol>
+                <ul>3.1 Adjacent sibling combinator</ul>
+                <ul>3.2 General sibling combinator</ul></p></td>
+        </tr>
+    </table> <hr>
+    <table>
+        <tr>
+            <th style="width: 33.33%">property และ value คืออะไรแตกต่างกันอย่างไร</th>
+            <th style="width: 33.33%">property ที่สอนใน precamp มีกี่กลุ่มอะไรบ้าง</th>
+            <th style="width: 33.33%">value unit มีกี่ประเภทอะไรบ้างแต่ละ ประเภทคืออะไร</th>
+        </tr>
+        <tr>
+            <td>Property คือชื่อคุณสมบัติของ css เช่น width, height, position ฯลฯ <br>
+                Values คือค่าของ property นั้นๆ เช่น 500px สำหรับความกว้าง <br>
+            </td>
+            <td>
+                1. Property for content: color , size , font , text, list-style-type, Height, Width, background<br>
+                2. Property for border : border, table<br>
+                3. Property for padding : padding (top right buttom left)<br>
+                4. Property for margin : margin (top right buttom left)<br>
+                5. Property for element : display, Height, Width, Position, Float, Align, Flex, Grid
+            </td>
+            <td>
+                <p>1. Absolute lenghts ได้แก่
+                    cm เซนติเมตร
+                    mm มิลลิเมตร
+                    in นิ้ว
+                    px พิกเซล 1/96 นิ้ว
+                    pt พอยท์ 1/72 นิ้ว
+                    pc พิคาล 1/12 นิ้ว
+                    </p>
+                <p>2. relative lenghts
+                    em เท่าขนาดฟอนต์ของ element
+                    ex เท่าความสูงของฟอนต์ของ element
+                    ch ความกว้างของตัวหนังสือใน parent element
+                    rem เท่าขนาดฟอนต์ของ root element
+                    vh เปอร์เซ็นต์ความสูงหน้าจอ
+                    vw เปอร์เซ็นต์ความกว้างหน้าจอ
+                    vmin เปอร์เซ็นต์ของ view point ต่ำสุด
+                    vmax เปอร์เซ็นต์ของ view point สูงสุด
+                    % เปอร์เซ็นต์ของ parent element</p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
