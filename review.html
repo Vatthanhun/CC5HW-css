@@ -20,6 +20,13 @@ td, th {
 tr:nth-child(odd) {
   background-color: #dddddd;
 }
+div {
+    background-color: lightgrey;
+    width: 300px;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
 </style>
 </head>
 <body>
@@ -92,7 +99,7 @@ tr:nth-child(odd) {
             </td>
         </tr>
     </table><hr>
-    <table>
+    <div>
         <form action="/action_page.php">
             <label for="name">Name :   </label>
             <span><input type="text" id="name" name="name" placeholder="Your Name"></span><br>
@@ -140,18 +147,31 @@ tr:nth-child(odd) {
             <label for="max">Max Score :   </label>
             <span><input type="number" id="max" name="max" placeholder="Edit Max Score"></span><br>            
             <br><input type="submit" value="Submit">
-          </form> 
-    </table>
+          </form> </div>
+    
     <hr>
 <p>
-    4. slide 15 (review CSS) <br>
+    <strong> 4. slide 15 (review CSS) </strong><br>
     4.1 value ใน display property มีอะไรบ้าง <br>
-    <strong>ตอบ</strong> 
+    <strong>ตอบ</strong> - display: inline;  แสดงผลในบรรทัดเดียวกัน เช่น span, a , img, li, ul<br>
+    - display: block;  //แสดงผลคนละบรรทัด เช่น div, h1 — h6, p, form, header, footer, section, br<br>
+    - display: none;  //ซ่อนการแสดงผล คือ ธรรมดา ใช้กับ JavaScript ให้ hide (ซ่อน) และ show (แสดง) องค์ประกอบ (Element) โดยไม่ต้องลบและสร้างใหม่<br>
+    - visibility:hidden;  //ซ่อนการแสดงผล แบบเหลือพื้นที่ไว้<br>
     4.2 grid และ flex แตกต่างกันอย่างไร<br>
+    <strong>ตอบ</strong> Flex ใช้เพื่อจัดการ layout 1D ส่วน Grid ใช้เพื่อจัดการ layout 2D<br>
+    Flex เราสามารถจัดวางของต่างๆภายใน layout 1 แถว อาจจะเป็นแนวตั้งหรือแนวนอน จากบนลงล่างหรือจากซ้ายไปขวา<br>
+    ส่วน Grid เราสามารถจัดของไว้ตรงไหนก็ได้ใน grid layout มีลักษณะเป็น column กับ row <br>
     4.3 justify and align แตกต่างกันอย่างไร<br>
+    <strong>ตอบ</strong> text-align : จัดให้ชิดซ้าย ขวา หรือวางตรงกลางข้อความ ใช้ค่าเฉพาะคือ left , right, center , justify มีค่า Default คือ left <br>
+    ส่วน justify คือจัดให้ทั้งซ้ายและขวา ตรงข้ามกันหมด โดยเพิ่มช่องว่างระหว่างคำเพื่อให้ทั้งสองด้านตรงกันหมด <br>
     5. silde 16 (review CSS)<br>
     5.1 position คืออะไร และ อะไรบ้าง<br>
-    5.2 z-index คืออะไรใช้อย่างไร<hr>
-</p>
+    <strong>ตอบ</strong> position คือ property โดยมี value ได้แก่ 1. static เป็นค่าเริ่มต้น 2.relative เป็นการกำหนดตำแหน่งที่อิงความสัมพันธ์กับตำแหน่งเดิม <br>
+    3.absolute จะกำหนดตำแหน่งโดยอิงกับตำแหน่ง parent ตัวแรก ที่กำหนด position เป็นค่าอื่นที่ไม่ใช่ static <br>
+    และ 4.fixed ใช้กำหนดตำแหน่งของ element โดยอิงความสัมพันธ์กับตำแหน่งขอบด้านในของบราวเซอร์ และจะไม่เคลื่อนเมื่อมีการเลื่อน scrollbar <br>
+    5.2 z-index คืออะไรใช้อย่างไร<br>
+    <strong>ตอบ</strong> เป็น CSS Property ตัวหนึ่งที่ไว้สำหรับกำหนด ตำแหน่งในแกน Z ของ DOM แต่ละตัว ใช้จัดเรียง elementที่ซ้อนกันและมีผลกับ element ที่กำหนด position ไว้เท่านั้น<br>
+     ถ้า z-index อันไหนมีค่ามากกว่าก็จะอยู่ด้านบน
+<hr></p>
 </body>
 </html>
